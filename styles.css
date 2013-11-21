@@ -1,0 +1,28 @@
+body
+{
+background-color : #E9E9E9; 
+leftmargin : 0; 
+topmargin : 0; 
+marginwidth : 0; 
+marginheight : 0;
+}
+.generalText
+   {
+   color:black;
+   font-size:8pt;
+   font-family: arial;
+   }
+.generalTitles
+   {
+   color: blue;
+   font-size:10 pt;
+   font-family: 'MS Sans Serif';
+   font-weight: bold;
+   }
+.eventTitle
+   {
+   color:black;
+   font-size:9pt;
+   font-family: arial;
+   font-weight: normal;
+   }
