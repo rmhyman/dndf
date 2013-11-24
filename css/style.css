@@ -67,7 +67,6 @@
 
 	#nav
 	{
-		background-color: #282828;
 		text-align: center;
 		position: fixed;
 		left: 0;
@@ -86,14 +85,15 @@
 		{
 			position: relative;
 			display: block;
-			color: #fff;
+			color:black;
 			text-decoration: none;
 			outline: 0;
 		}
 		
 			#nav a:hover
 			{
-				color: #fff !important;
+				#color: #fff !important;
+				color:black;
 			}
 			
 			#nav a.active:before
