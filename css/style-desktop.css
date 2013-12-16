@@ -351,14 +351,15 @@
 
 	#nav
 	{
-		position: absolute;
+		/*position: absolute; */
 		display: block;
-		top: 2.5em;
+		/*top: 2.5em; */
 		left: 0;
 		width: 100%;
 		text-align: center;
 	}
 
+/*
 		#nav > ul > li > ul
 		{
 			display: none;
@@ -405,7 +406,7 @@
 			{
 				color: #fff;
 			}
-
+*/
 	.dropotron
 	{
 		background: #222835 url('images/overlay.png');

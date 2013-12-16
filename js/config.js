@@ -166,6 +166,7 @@ jQuery(function() {
 	// Links
 	jQuery('a').click(function(e) {
 		var t = jQuery(this), h = t.attr('href'), article;
+		
 
 		if (h.charAt(0) == '#' && h.length > 1 && ( article = jQuery('article#' + h.substring(1))).length > 0) {
 			var pos = Math.max(article.parent().offset().top - _nav.height() + 15, 0);
@@ -173,30 +174,38 @@ jQuery(function() {
 			_bh.animate({
 				scrollTop : pos
 			}, 'slow', 'swing');
+			
 		}
 	});
 
 });
-jQuery(function() {
+
+
+$(document).ready(function() {
 	// Stick the #nav to the top of the window
 	var nav = $('#nav');
 	var navHomeY = nav.offset().top;
-	var isFixed = false;
+	var isFixed = true;
 	var $w = $(window);
-	$w.scroll(function() {
+	$w.scroll(function(event) {
 		var scrollTop = $w.scrollTop();
 		var shouldBeFixed = scrollTop > navHomeY;
+		nav.css({
+			position: 'fixed',
+			top: scrollTop
+		});
 		if (shouldBeFixed && !isFixed) {
 			nav.css({
-				position : 'fixed',
+				position : 'static',
 				top : 0,
 				left : nav.offset().left,
+				display : 'inline-block',
 				width : nav.width()
 			});
 			isFixed = true;
 		} else if (!shouldBeFixed && isFixed) {
 			nav.css({
-				position : 'static'
+				position : 'fixed'
 			});
 			isFixed = false;
 		}
