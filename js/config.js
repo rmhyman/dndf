@@ -190,25 +190,16 @@ $(document).ready(function() {
 	$w.scroll(function(event) {
 		var scrollTop = $w.scrollTop();
 		var shouldBeFixed = scrollTop > navHomeY;
-		nav.css({
+		var FF = !(window.mozInnerScreenX == null);
+if(FF) {
+// is firefox 
+nav.css({
 			position: 'fixed',
 			top: scrollTop
 		});
-		if (shouldBeFixed && !isFixed) {
-			nav.css({
-				position : 'static',
-				top : 0,
-				left : nav.offset().left,
-				display : 'inline-block',
-				width : nav.width()
-			});
-			isFixed = true;
-		} else if (!shouldBeFixed && isFixed) {
-			nav.css({
-				position : 'fixed'
-			});
-			isFixed = false;
-		}
+} else { 
+// not firefox 
+}
 	});
 });
 
